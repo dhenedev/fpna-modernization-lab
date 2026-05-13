@@ -1,0 +1,41 @@
+asset_id,asset_type,region,maintenance_status,replacement_risk,last_inspection_date
+A0001,Pipeline,Central,Due,Low,2024-12-29
+A0002,Pipeline,Northwest,Current,Medium,2026-03-15
+A0003,Pipeline,Central,Overdue,Low,2025-04-25
+A0004,Control System,Southeast,Current,Medium,2026-03-24
+A0005,Transmission Line,Central,Overdue,High,2026-01-25
+A0006,Substation,Northwest,Due,Medium,2026-03-24
+A0007,Transformer,Northwest,,Medium,2025-09-13
+A0008,Pipeline,Southwest,Overdue,Medium,2026-01-16
+A0009,Pipeline,Northwest,Due,High,2025-04-25
+A0010,Transformer,Southwest,,Medium,2025-12-16
+A0011,Transmission Line,Southwest,Overdue,Low,2026-01-06
+A0012,Substation,Central,,Medium,2026-03-31
+A0013,Transformer,Southeast,Overdue,Low,2025-06-02
+A0014,Control System,Northeast,,Low,2025-12-19
+A0015,Transformer,Southwest,Overdue,High,2025-07-08
+A0016,Control System,Southeast,,Medium,2026-01-11
+A0017,Transformer,Southeast,,Low,2025-04-12
+A0018,Substation,Northwest,Due,High,2026-02-11
+A0019,Control System,Southeast,Current,Medium,2025-10-20
+A0020,Transmission Line,Northeast,Overdue,High,2025-02-17
+A0021,Substation,Northwest,Overdue,High,2025-11-10
+A0022,Substation,Central,,Low,2025-09-13
+A0023,Substation,Central,Due,High,2025-01-21
+A0024,Substation,Central,Due,Low,2025-10-24
+A0025,Transformer,Southeast,Current,High,2025-11-19
+A0026,Control System,Northwest,Current,Medium,2025-02-08
+A0027,Pipeline,Southwest,Current,Low,2025-02-08
+A0028,Transmission Line,Northwest,Current,High,2025-08-28
+A0029,Substation,Southeast,Due,Low,2025-05-31
+A0030,Control System,Southeast,Due,Medium,2025-08-06
+A0031,Transmission Line,Northeast,Due,High,2025-04-12
+A0032,Transformer,Central,,High,2025-06-05
+A0033,Pipeline,Northeast,,Low,2025-12-28
+A0034,Transformer,Northwest,Overdue,Low,2025-07-06
+A0035,Transmission Line,Southwest,Due,Low,2026-03-28
+A0036,Substation,Southwest,Current,Low,2025-02-17
+A0037,Pipeline,Northwest,Due,Medium,2025-05-26
+A0038,Control System,Southwest,Due,High,2025-01-10
+A0039,Transmission Line,Southeast,,Low,2025-03-28
+A0040,Control System,Northeast,Due,Low,2026-03-15

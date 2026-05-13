@@ -1,0 +1,10 @@
+vendor_id,vendor_name,parent_vendor,vendor_category,payment_terms,region
+V001,Cascade Field Services,Cascade Field Services,Field Services,Net 60,Central
+V002,Summit Utility Supply,Summit Utility Supply,Materials,Net 60,Northwest
+V003,Evergreen Equipment Co,Evergreen Equipment Co,Professional Services,Net 30,Southeast
+V004,Northline Consulting,Northline Consulting,Field Services,Net 30,Southwest
+V005,Pioneer Controls,Pioneer Controls,Professional Services,Net 30,Southeast
+V006,BlueRiver Materials,,,Net 60,Southeast
+V007,Atlas Infrastructure,Atlas Infrastructure,Technology,Net 60,Central
+V008,Harbor Safety Group,Harbor Safety Group,Field Services,Net 30,Northeast
+V009,Cascade Field Svcs,Cascade Field Services,Field Services,Net 30,Northwest

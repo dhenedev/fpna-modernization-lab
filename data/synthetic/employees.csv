@@ -1,0 +1,31 @@
+employee_id,department,region,utilization_rate,manager_id
+E0001,Ops,Northeast,0.73,E0001
+E0002,Ops,Northwest,0.5,E0001
+E0003,Field Operations,Southwest,0.6,E0004
+E0004,Field Operations,Central,0.82,E0001
+E0005,Executive,Southeast,0.53,E0005
+E0006,Finance,Northwest,1.19,E0002
+E0007,Executive,Northeast,0.84,E0001
+E0008,Field Operations,Northeast,0.45,E0004
+E0009,Asset Management,Northeast,1.01,E0005
+E0010,Ops,Northeast,0.57,E0001
+E0011,Operations,Southeast,0.5,E0001
+E0012,Operations,Northeast,0.85,E0002
+E0013,Finance,Southeast,0.51,E0005
+E0014,Finance,Southwest,0.77,E0005
+E0015,Field Operations,Southeast,0.93,E0004
+E0016,Ops,Southeast,0.9,E0003
+E0017,Field Operations,Central,0.64,E0003
+E0018,Executive,Central,1.19,E0001
+E0019,Executive,Southeast,1.25,E0001
+E0020,Operations,Southwest,0.85,
+E0021,Asset Management,Northwest,1.15,E0002
+E0022,Executive,Southeast,1.01,E0005
+E0023,Finance,Southeast,0.69,E0002
+E0024,Asset Management,Northwest,1.16,E0002
+E0025,Asset Management,Central,0.93,E0002
+E0026,Ops,Central,0.85,E0001
+E0027,Finance,Northeast,1.11,
+E0028,Asset Management,Southwest,0.96,E0004
+E0029,Operations,Northeast,0.9,
+E0030,Ops,Southwest,0.89,E0005

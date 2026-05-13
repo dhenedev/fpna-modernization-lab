@@ -1,0 +1,6 @@
+gl_account,gl_category,financial_statement_line
+5000,Labor,Cost of Services
+5100,Materials,Cost of Services
+5200,Equipment,Operating Expense
+5300,Technology,Operating Expense
+5400,Professional Services,Operating Expense
