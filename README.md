@@ -12,7 +12,7 @@ Synthetic enterprise modernization platform demonstrating Snowflake medallion ar
 
 # Architecture Overview
 
-![Architecture Diagram](assets/architecture/fpna-modernization-architecture.svg)
+![Architecture Diagram](assets/architecture/fpna-modernization-architecture.png)
 
 ---
 
