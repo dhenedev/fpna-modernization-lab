@@ -6,13 +6,17 @@ Synthetic enterprise modernization platform demonstrating Snowflake medallion ar
 
 # Executive Dashboard
 
-![Executive Dashboard](assets/screenshots/dashboard-overview.png)
+<p align="center">
+  <img src="assets/screenshots/dashboard-overview.png" width="1000">
+</p>
 
 ---
 
 # Architecture Overview
 
-![Architecture Diagram](assets/architecture/fpna-modernization-architecture.png)
+<p align="center">
+  <img src="assets/architecture/fpna-modernization-architecture.png" width="1000">
+</p>
 
 ---
 
