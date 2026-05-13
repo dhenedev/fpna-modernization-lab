@@ -10,6 +10,10 @@ Synthetic enterprise modernization platform demonstrating Snowflake medallion ar
   <img src="assets/screenshots/dashboard-overview.png" width="1000">
 </p>
 
+<p align="center">
+  <em>Executive modernization dashboard demonstrating KPI visibility, operational intelligence, and governance-aware reporting concepts.</em>
+</p>
+
 ---
 
 # Architecture Overview
