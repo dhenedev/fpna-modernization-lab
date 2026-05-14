@@ -13,6 +13,8 @@ models:
 
       - name: total_spend
         description: Total invoice spend associated with the vendor.
+        tests:
+          - not_null
 
       - name: invoice_count
         description: Number of invoices associated with the vendor.

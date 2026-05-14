@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: FPNA_MODERNIZATION_LAB
+    schema: BRONZE
+    description: Raw source-aligned tables loaded from synthetic CSV files.
+    tables:
+      - name: bronze_vendors
+        description: Raw vendor master data.
+
+        columns:
+          - name: vendor_id
+            description: Raw vendor identifier.
+            tests:
+              - not_null
+
+          - name: vendor_name
+            description: Raw vendor name.
+            tests:
+              - not_null
+
+
+      - name: bronze_invoices
+        description: Raw invoice transaction data.
+      - name: bronze_gl_accounts
+        description: Raw general ledger reference data.
+      - name: bronze_assets
+        description: Raw infrastructure asset data.
+      - name: bronze_employees
+        description: Raw workforce data.
+      - name: bronze_work_orders
+        description: Raw field operations work order data.
+      - name: bronze_forecast
+        description: Raw FP&A forecast data.
+
+

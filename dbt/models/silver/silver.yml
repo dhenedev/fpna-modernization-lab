@@ -12,6 +12,8 @@ models:
 
       - name: vendor_name
         description: Standardized uppercase vendor display name.
+        tests:
+          - not_null
 
       - name: parent_vendor
         description: Standardized parent vendor value, defaulted when missing.
@@ -21,3 +23,8 @@ models:
 
       - name: missing_category_flag
         description: Governance flag identifying vendors missing source categorization.
+
+      - name: region
+        description: Standardized operating region.
+        tests:
+          - not_null
