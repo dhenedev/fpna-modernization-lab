@@ -1,0 +1,14 @@
+fpna_modernization_lab:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: YOUR_ACCOUNT_IDENTIFIER
+      user: YOUR_USERNAME
+      password: YOUR_PASSWORD
+      role: YOUR_ROLE
+      database: FPNA_MODERNIZATION_LAB
+      warehouse: FPNA_LAB_WH
+      schema: DBT_DEV
+      threads: 4
+      client_session_keep_alive: false
