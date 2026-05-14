@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: silver_vendors
+    description: Standardized vendor master model with governance flags for missing vendor categorization.
+    columns:
+      - name: vendor_id
+        description: Unique vendor identifier from the source system.
+        tests:
+          - not_null
+          - unique
+
+      - name: vendor_name
+        description: Standardized uppercase vendor display name.
+
+      - name: parent_vendor
+        description: Standardized parent vendor value, defaulted when missing.
+
+      - name: vendor_category
+        description: Standardized vendor category, defaulted to UNCLASSIFIED when missing.
+
+      - name: missing_category_flag
+        description: Governance flag identifying vendors missing source categorization.
