@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: gold_vendor_spend
+    description: Executive vendor spend analytics model used for finance reporting and operational visibility.
+
+    columns:
+      - name: vendor_id
+        description: Unique vendor identifier.
+
+      - name: vendor_name
+        description: Standardized vendor display name.
+
+      - name: total_spend
+        description: Total invoice spend associated with the vendor.
+
+      - name: invoice_count
+        description: Number of invoices associated with the vendor.
+
+      - name: high_value_invoice_count
+        description: Count of high-value invoices above governance threshold.
+
+      - name: invalid_gl_count
+        description: Count of invoices associated with invalid GL mappings.
