@@ -1,0 +1,16 @@
+name: fpna_modernization_lab
+version: '1.0.0'
+config-version: 2
+
+profile: fpna_modernization_lab
+
+model-paths: ["models"]
+
+models:
+  fpna_modernization_lab:
+    silver:
+      +schema: silver
+      +materialized: view
+    gold:
+      +schema: gold
+      +materialized: view
