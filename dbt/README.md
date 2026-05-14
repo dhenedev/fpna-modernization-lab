@@ -27,3 +27,10 @@ The goal is to evolve SQL transformation scripts into a modern analytics enginee
 - lineage graph
 - reusable macros
 - CI-friendly transformation workflow
+
+## Local Setup
+
+Install dbt dependencies:
+
+```bash
+pip install -r dbt/requirements.txt
