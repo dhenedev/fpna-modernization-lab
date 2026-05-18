@@ -2,6 +2,12 @@
 
 Synthetic enterprise modernization platform demonstrating Snowflake medallion architecture, governance-aware analytics engineering, executive reporting, and AI-assisted operational intelligence concepts.
 
+## Architecture Case Study
+
+Read the full modernization architecture case study:
+
+[FP&A Modernization Case Study](./docs/case-study-fpna-modernization.md)
+
 ---
 
 # Executive Dashboard
