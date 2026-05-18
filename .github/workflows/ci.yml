@@ -33,7 +33,8 @@ jobs:
       - name: Validate dbt project parse
         working-directory: dbt
         run: |
-          dbt parse
+          cp profiles.example.yml profiles.yml
+          dbt parse --profiles-dir .
 
       - name: Validate Docker build
         run: |
