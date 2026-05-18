@@ -104,6 +104,75 @@ This separation improves:
 
 ---
 
+# Analytics Engineering Framework
+
+The modernization platform includes a modular dbt analytics engineering framework designed to improve:
+
+- transformation governance
+- lineage visibility
+- model documentation
+- operational trust
+- reusable KPI logic
+- scalable analytics workflows
+
+---
+
+## dbt Lineage Visualization
+
+<p align="center">
+  <img src="./assets/screenshots/dbt-lineage-graph.png" width="1100">
+</p>
+
+<p align="center">
+  <em>dbt lineage graph demonstrating bronze, silver, and gold transformation dependencies.</em>
+</p>
+
+---
+
+## dbt Model Documentation
+
+<p align="center">
+  <img src="./assets/screenshots/dbt-model-docs.png" width="1100">
+</p>
+
+<p align="center">
+  <em>dbt model documentation demonstrating governance-aware KPI modeling, testing, and metadata-driven analytics engineering.</em>
+</p>
+
+---
+
+## Executable Modernization Platform
+
+The FP&A Modernization Lab is fully executable within a local Snowflake + dbt development environment.
+
+Validated platform capabilities include:
+
+- Snowflake environment provisioning
+- CSV stage ingestion workflows
+- bronze/silver/gold medallion transformations
+- governance exception monitoring
+- dbt model execution
+- dbt lineage generation
+- dbt testing workflows
+- Streamlit dashboard visualization
+- executable KPI modeling
+
+---
+
+## Governance & Operational Trust
+
+The platform intentionally emphasizes governance-aware analytics engineering principles including:
+
+- explainable KPI logic
+- lineage-aware transformations
+- modular entity standardization
+- governance exception visibility
+- testable transformation workflows
+- operational trust indicators
+- documentation-driven engineering
+
+---
+
 # Governance Concepts
 
 The modernization lab demonstrates governance-aware analytics concepts including:
