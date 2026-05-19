@@ -20,6 +20,24 @@ sources:
             tests:
               - not_null
 
+      - name: bronze_operational_events
+        description: Raw multi-year operational event telemetry supporting workload, cost, risk, and trend analysis.
+        columns:
+          - name: event_id
+            description: Unique operational event identifier.
+            tests:
+              - not_null
+              - unique
+
+          - name: event_timestamp
+            description: Date the operational event occurred.
+            tests:
+              - not_null
+
+          - name: event_type
+            description: Type of business event captured in the operational telemetry layer.
+            tests:
+              - not_null
 
       - name: bronze_invoices
         description: Raw invoice transaction data.

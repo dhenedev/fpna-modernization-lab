@@ -28,3 +28,37 @@ models:
         description: Standardized operating region.
         tests:
           - not_null
+
+  - name: silver_operational_events
+    description: Standardized operational telemetry model with period fields, governance flags, event classifications, and pre-gold validation logic.
+    columns:
+      - name: event_id
+        description: Unique operational event identifier.
+        tests:
+          - not_null
+          - unique
+
+      - name: event_timestamp
+        description: Date the operational event occurred.
+        tests:
+          - not_null
+
+      - name: event_month
+        description: Month-level event period used for trend analysis.
+        tests:
+          - not_null
+
+      - name: governance_risk_level
+        description: Standardized governance risk level based on business impact.
+
+      - name: unresolved_event_flag
+        description: Flag identifying open or delayed operational events.
+
+      - name: high_risk_event_flag
+        description: Flag identifying high-risk operational events.
+
+      - name: refund_event_flag
+        description: Flag identifying refund-related operational events.
+
+      - name: invoice_event_flag
+        description: Flag identifying invoice processing events.
