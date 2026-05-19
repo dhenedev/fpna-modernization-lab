@@ -1,7 +1,7 @@
 # FP&A Modernization Lab
 
 ## Executive Summary
-FP&A Modernization Lab is a modernization-focused analytics platform designed to demonstrate how governed data infrastructure, operational telemetry, and sustainable delivery practices enable scalable enterprise decision support.
+FP&A Modernization Lab is a governance-aware operational intelligence platform designed to demonstrate how sustainable data infrastructure, operational telemetry, and modern analytics engineering practices enable scalable enterprise decision support.
 
 The platform combines Snowflake, dbt, Streamlit, Docker, and CI validation workflows to simulate a modern operational intelligence environment capable of supporting executive visibility, trend-aware telemetry, and trustworthy analytics transformation.
 
@@ -56,7 +56,7 @@ This layered approach enables reproducible analytics engineering workflows while
 ![dbt Lineage Graph](assets/screenshots/dbt-lineage-graph.png)
 
 ## Operational Intelligence
-The platform includes operational telemetry and trend intelligence capabilities designed to provide directional operational awareness rather than noisy alert-driven reporting.
+The platform includes operational telemetry and trend intelligence capabilities designed to provide directional operational awareness, baseline-driven interpretation, and sustainable executive visibility rather than noisy alert-driven reporting.
 
 Operational metrics are normalized against rolling baselines to support:
 
