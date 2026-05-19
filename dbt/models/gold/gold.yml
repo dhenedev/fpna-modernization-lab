@@ -24,3 +24,37 @@ models:
 
       - name: invalid_gl_count
         description: Count of invoices associated with invalid GL mappings.
+
+  - name: gold_operational_efficiency_baseline
+    description: Monthly operational baseline telemetry model supporting workload efficiency, cost acceleration analysis, governance trend visibility, and executive operational intelligence.
+
+    columns:
+      - name: event_month
+        description: Month-level operational reporting period.
+        tests:
+          - not_null
+          - unique
+
+      - name: total_operational_events
+        description: Total operational event workload for the reporting month.
+
+      - name: total_operational_cost
+        description: Total operational cost associated with monthly operational activity.
+
+      - name: cost_per_operational_event
+        description: Primary operational efficiency baseline metric representing normalized operational cost per event.
+
+      - name: rolling_3_month_avg_cost_per_event
+        description: Smoothed operational efficiency trend baseline using rolling three-month averages.
+
+      - name: month_over_month_cost_change_pct
+        description: Directional operational cost acceleration indicator.
+
+      - name: refund_event_ratio
+        description: Percentage of operational events associated with refunds or reversals.
+
+      - name: unresolved_event_ratio
+        description: Percentage of operational events remaining open or delayed.
+
+      - name: high_risk_event_ratio
+        description: Percentage of operational events classified as high governance risk.
