@@ -134,9 +134,57 @@ c4.metric(
     f"${latest['rolling_3_month_cost_per_event']:,.0f}"
 )
 
-st.info(
+st.caption(
     "This view emphasizes directional operational context. Cost movement is interpreted against workload volume "
     "and a rolling baseline to avoid overreacting to expected volatility or seasonal operating patterns."
+)
+
+# Executive interpretation summary
+workload_change = (
+    (latest["total_operational_events"] - prior["total_operational_events"])
+    / prior["total_operational_events"]
+    * 100
+) if prior["total_operational_events"] else 0
+
+cost_per_event_change = latest["mom_cost_per_event_change_pct"]
+
+if cost_per_event_change > 10 and workload_change < cost_per_event_change:
+    efficiency_signal = (
+        "cost-per-event is rising faster than workload, suggesting potential operational efficiency pressure."
+    )
+elif cost_per_event_change < -5:
+    efficiency_signal = (
+        "cost-per-event declined versus the prior month, suggesting improved operational efficiency."
+    )
+else:
+    efficiency_signal = (
+        "cost-per-event remains relatively stable against recent workload movement."
+    )
+
+if latest["refund_event_ratio"] > rolling_13["refund_event_ratio"].mean():
+    refund_signal = (
+        "Refund activity is above the rolling 13-month average and should be monitored as a potential quality or customer experience signal."
+    )
+else:
+    refund_signal = (
+        "Refund activity remains within the recent operating range."
+    )
+
+if latest["high_risk_event_ratio"] > rolling_13["high_risk_event_ratio"].mean():
+    risk_signal = (
+        "High-risk operational events are above the recent baseline, indicating elevated governance or service-risk exposure."
+    )
+else:
+    risk_signal = (
+        "High-risk operational events remain within the recent baseline."
+    )
+
+st.subheader("Executive Interpretation")
+
+st.info(
+    f"Current month workload changed {workload_change:,.1f}% versus the prior month, while "
+    f"cost-per-event changed {cost_per_event_change:,.1f}%. {efficiency_signal} "
+    f"{refund_signal} {risk_signal}"
 )
 
 st.divider()
