@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
+import altair as alt
 
 st.set_page_config(
     page_title="Operational Trend Intelligence",
@@ -44,6 +45,57 @@ monthly["unresolved_event_ratio"] = monthly["unresolved_events"] / monthly["tota
 latest_month = monthly["event_month"].max()
 window_start = latest_month - pd.DateOffset(months=12)
 rolling_13 = monthly[monthly["event_month"] >= window_start].copy()
+
+# Conservative 3-month trend-following projection
+recent = rolling_13.tail(3).copy()
+
+cost_slope = (
+    recent["cost_per_event"].iloc[-1] - recent["cost_per_event"].iloc[0]
+) / max(len(recent) - 1, 1)
+
+workload_slope = (
+    recent["total_operational_events"].iloc[-1] - recent["total_operational_events"].iloc[0]
+) / max(len(recent) - 1, 1)
+
+projection_rows = []
+last_month = rolling_13["event_month"].max()
+last_cost_per_event = rolling_13["cost_per_event"].iloc[-1]
+last_workload = rolling_13["total_operational_events"].iloc[-1]
+
+for i in range(1, 4):
+    projected_month = last_month + pd.DateOffset(months=i)
+
+    projected_cost_per_event = max(
+        0,
+        last_cost_per_event + (cost_slope * i * 1.10)
+    )
+
+    projected_workload = max(
+        0,
+        last_workload + (workload_slope * i * 1.10)
+    )
+
+    projection_rows.append({
+        "event_month": projected_month,
+        "cost_per_event": projected_cost_per_event,
+        "total_operational_events": projected_workload,
+        "series_type": "Projected"
+    })
+
+projection = pd.DataFrame(projection_rows)
+
+historical_projection_base = rolling_13[[
+    "event_month",
+    "cost_per_event",
+    "total_operational_events"
+]].copy()
+
+historical_projection_base["series_type"] = "Historical"
+
+trend_projection = pd.concat(
+    [historical_projection_base, projection],
+    ignore_index=True
+)
 
 latest = rolling_13.iloc[-1]
 prior = rolling_13.iloc[-2] if len(rolling_13) > 1 else latest
@@ -92,12 +144,26 @@ st.divider()
 left, right = st.columns([2, 1])
 
 with left:
-    st.subheader("Cost per Operational Event vs Rolling Baseline")
-    st.line_chart(
-        rolling_13,
-        x="event_month",
-        y=["cost_per_event", "rolling_3_month_cost_per_event"]
-    )
+    st.subheader("Cost per Operational Event vs Conservative Projection")
+
+    cost_projection_chart = alt.Chart(trend_projection).mark_line(point=True).encode(
+        x=alt.X("event_month:T", title="Event Month"),
+        y=alt.Y("cost_per_event:Q", title="Cost per Event"),
+        color=alt.Color("series_type:N", title="Series"),
+        strokeDash=alt.StrokeDash("series_type:N", title="Series"),
+        tooltip=[
+            "event_month:T",
+            "series_type:N",
+            alt.Tooltip("cost_per_event:Q", format="$,.0f")
+        ]
+    ).properties(height=350)
+
+    st.altair_chart(cost_projection_chart, use_container_width=True)
+
+    st.info(
+    "Projection uses recent trend direction with a mild conservative uplift. "
+    "It is intended for operational preparedness, not precise prediction."
+)
 
 with right:
     st.subheader("Latest Period Ratios")
@@ -114,6 +180,7 @@ with right:
         ]
     })
     st.dataframe(ratio_df, use_container_width=True, hide_index=True)
+
 
 st.divider()
 
